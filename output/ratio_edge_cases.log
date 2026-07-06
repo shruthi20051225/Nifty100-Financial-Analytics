@@ -1,0 +1,148 @@
+RATIO EDGE CASES
+============================================================
+
+Company : Adani Enterprises Ltd
+Company ID : ADANIENT
+Latest Year : 2024-03-01
+Source ROE : 13.64
+Calculated ROE : 8.53
+Difference : 5.11%
+Category : Formula Discrepancy
+------------------------------------------------------------
+Company : Adani Power Ltd
+Company ID : ADANIPOWER
+Latest Year : 2024-03-01
+Source ROE : 57.1
+Calculated ROE : 48.28
+Difference : 8.82%
+Category : Formula Discrepancy
+------------------------------------------------------------
+Company : Bajaj Finserv Ltd
+Company ID : BAJAJFINSV
+Latest Year : 2024-03-01
+Source ROE : 11.72
+Calculated ROE : 25.85
+Difference : 14.13%
+Category : Version Difference
+------------------------------------------------------------
+Company : Bharat Electronics Ltd
+Company ID : BEL
+Latest Year : 2024-03-01
+Source ROE : 26.3
+Calculated ROE : 4744.05
+Difference : 4717.75%
+Category : Data Source Issue
+------------------------------------------------------------
+Company : Bharat Petroleum Corporation Ltd
+Company ID : BPCL
+Latest Year : 2024-03-01
+Source ROE : 41.9
+Calculated ROE : 35.51
+Difference : 6.39%
+Category : Formula Discrepancy
+------------------------------------------------------------
+Company : Coal India Ltd
+Company ID : COALINDIA
+Latest Year : 2024-03-01
+Source ROE : 52.0
+Calculated ROE : 45.17
+Difference : 6.83%
+Category : Formula Discrepancy
+------------------------------------------------------------
+Company : Godrej Consumer Products Ltd
+Company ID : GODREJCP
+Latest Year : 2024-03-01
+Source ROE : 6.77
+Calculated ROE : -4.45
+Difference : 11.22%
+Category : Version Difference
+------------------------------------------------------------
+Company : Hindustan Aeronautics Ltd
+Company ID : HAL
+Latest Year : 2024-03-01
+Source ROE : 28.9
+Calculated ROE : 3816.58
+Difference : 3787.68%
+Category : Data Source Issue
+------------------------------------------------------------
+Company : Indian Railway Catering & Tourism Corporation Ltd
+Company ID : IRCTC
+Latest Year : 2024-03-01
+Source ROE : 40.4
+Calculated ROE : 34.4
+Difference : 6.00%
+Category : Formula Discrepancy
+------------------------------------------------------------
+Company : Life Insurance Corporation of India
+Company ID : LICI
+Latest Year : 2024-03-01
+Source ROE : 63.61
+Calculated ROE : 49.45
+Difference : 14.16%
+Category : Version Difference
+------------------------------------------------------------
+Company : Larsen & Toubro Ltd
+Company ID : LT
+Latest Year : 2024-03-01
+Source ROE : 10.49
+Calculated ROE : 77.67
+Difference : 67.18%
+Category : Data Source Issue
+------------------------------------------------------------
+Company : Nestle India Ltd
+Company ID : NESTLEIND
+Latest Year : 2024-03-01
+Source ROE : 135.61
+Calculated ROE : 117.75
+Difference : 17.86%
+Category : Version Difference
+------------------------------------------------------------
+Company : Power Finance Corporation Ltd
+Company ID : PFC
+Latest Year : 2024-03-01
+Source ROE : 19.49
+Calculated ROE : 26.16
+Difference : 6.67%
+Category : Formula Discrepancy
+------------------------------------------------------------
+Company : Punjab National Bank
+Company ID : PNB
+Latest Year : 2024-03-01
+Source ROE : 8.7
+Calculated ROE : 61.32
+Difference : 52.62%
+Category : Data Source Issue
+------------------------------------------------------------
+Company : Tata Motors Ltd
+Company ID : TATAMOTORS
+Latest Year : 2024-03-01
+Source ROE : 49.4
+Calculated ROE : 37.46
+Difference : 11.94%
+Category : Version Difference
+------------------------------------------------------------
+Company : Tata Steel Ltd
+
+Company ID : TATASTEEL
+Latest Year : 2024-03-01
+Source ROE : 6.55
+Calculated ROE : -5.33
+Difference : 11.88%
+Category : Version Difference
+------------------------------------------------------------
+Company : Tata Consultancy Services Ltd
+Company ID : TCS
+Latest Year : 2024-03-01
+Source ROE : 0.52
+Calculated ROE : 50.94
+Difference : 50.42%
+Category : Data Source Issue
+------------------------------------------------------------
+Company : Trent Ltd
+Company ID : TRENT
+Latest Year : 2024-03-01
+Source ROE : 27.2
+Calculated ROE : 36.31
+Difference : 9.11%
+Category : Formula Discrepancy
+------------------------------------------------------------
