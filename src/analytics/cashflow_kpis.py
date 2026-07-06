@@ -1,62 +1,46 @@
-"""
-Sprint 2 - Day 11
-Cash Flow KPI Engine
-"""
-
 from typing import Optional
 
-
-# ==========================================================
-# FREE CASH FLOW
-# ==========================================================
 
 def free_cash_flow(
     operating_activity: float,
     investing_activity: float
 ) -> float:
     """
-    FCF = CFO + CFI
-    (Investing Activity is usually negative)
+    Free Cash Flow
+    FCF = CFO + Investing Activity
     """
     return operating_activity + investing_activity
 
 
-# ==========================================================
-# CFO QUALITY SCORE
-# ==========================================================
-
 def cfo_quality_score(
-    average_cfo: float,
-    average_pat: float
-):
+    cfo: float,
+    pat: float
+) -> Optional[str]:
     """
-    CFO / PAT
+    CFO Quality
     """
 
-    if average_pat == 0:
+    if pat == 0:
         return None
 
-    score = average_cfo / average_pat
+    ratio = cfo / pat
 
-    if score > 1:
+    if ratio > 1:
         return "High Quality"
 
-    if score >= 0.5:
+    elif ratio >= 0.5:
         return "Moderate"
 
-    return "Accrual Risk"
+    else:
+        return "Accrual Risk"
 
-
-# ==========================================================
-# CAPEX INTENSITY
-# ==========================================================
 
 def capex_intensity(
     investing_activity: float,
     sales: float
 ):
     """
-    abs(CFI) / Sales
+    CapEx Intensity (%)
     """
 
     if sales == 0:
@@ -73,17 +57,16 @@ def capex_intensity(
     else:
         label = "Capital Intensive"
 
-    return round(value,2), label
+    return round(value, 2), label
 
-
-# ==========================================================
-# FCF CONVERSION
-# ==========================================================
 
 def fcf_conversion(
     free_cash_flow_value: float,
     operating_profit: float
 ):
+    """
+    FCF Conversion
+    """
 
     if operating_profit == 0:
         return None
@@ -95,17 +78,14 @@ def fcf_conversion(
     )
 
 
-# ==========================================================
-# CAPITAL ALLOCATION
-# ==========================================================
-
 def capital_allocation_pattern(
-    cfo: float,
-    cfi: float,
-    cff: float
+    cfo,
+    cfi,
+    cff,
+    cfo_pat_ratio=1
 ):
     """
-    8-pattern classifier
+    8-pattern capital allocation classifier
     """
 
     signs = (
@@ -114,31 +94,27 @@ def capital_allocation_pattern(
         "+" if cff >= 0 else "-"
     )
 
-    patterns = {
+    if signs == ("+", "-", "-"):
+        if cfo_pat_ratio > 1:
+            return "Shareholder Returns"
+        return "Reinvestor"
 
-        ("+","-","-"):
-            "Reinvestor",
+    if signs == ("+", "+", "-"):
+        return "Liquidating Assets"
 
-        ("+","+","-"):
-            "Liquidating Assets",
+    if signs == ("-", "+", "+"):
+        return "Distress Signal"
 
-        ("-","+","+"):
-            "Distress Signal",
+    if signs == ("-", "-", "+"):
+        return "Growth Funded by Debt"
 
-        ("-","-","+"):
-            "Growth Funded by Debt",
+    if signs == ("+", "+", "+"):
+        return "Cash Accumulator"
 
-        ("+","+","+"):
-            "Cash Accumulator",
+    if signs == ("-", "-", "-"):
+        return "Pre-Revenue"
 
-        ("-","-","-"):
-            "Pre-Revenue",
+    if signs == ("+", "-", "+"):
+        return "Mixed"
 
-        ("+","-","+"):
-            "Mixed"
-    }
-
-    return patterns.get(
-        signs,
-        "Unknown"
-    )
+    return "Unknown"
