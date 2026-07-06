@@ -2,9 +2,11 @@ import sqlite3
 
 conn = sqlite3.connect("nifty100.db")
 
-cursor = conn.execute("PRAGMA table_info(financial_ratios)")
+cols = conn.execute(
+    "PRAGMA table_info(financial_ratios)"
+).fetchall()
 
-for row in cursor:
-    print(row)
+for c in cols:
+    print(c)
 
 conn.close()
