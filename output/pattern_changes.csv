@@ -1,0 +1,108 @@
+company_id,company_name,previous_pattern,current_pattern,change_detected
+ABB,Abbott India Ltd,Previous Year,Deleveraging,No Historical Comparison
+ADANIENSOL,Adani Energy Solutions Ltd,Previous Year,Deleveraging,No Historical Comparison
+ADANIENT,Adani Enterprises Ltd,Previous Year,Growth Investment,No Historical Comparison
+ADANIGREEN,Adani Green Energy Ltd,Previous Year,Growth Investment,No Historical Comparison
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Previous Year,Deleveraging,No Historical Comparison
+ADANIPOWER,Adani Power Ltd,Previous Year,Deleveraging,No Historical Comparison
+AMBUJACEM,Ambuja Cements Ltd,Previous Year,Growth Investment,No Historical Comparison
+APOLLOHOSP,"Apollo Hospitals
+Chain of Indian private hospitals",Previous Year,Deleveraging,No Historical Comparison
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Previous Year,Deleveraging,No Historical Comparison
+AXISBANK,Axis Bank Ltd,Previous Year,Distress Signal,No Historical Comparison
+BAJAJ-AUTO,Bajaj Auto Ltd,Previous Year,Deleveraging,No Historical Comparison
+BAJAJFINSV,Bajaj Finserv Ltd,Previous Year,Distress Signal,No Historical Comparison
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd,Previous Year,Deleveraging,No Historical Comparison
+BAJFINANCE,Bajaj Finance Ltd,Previous Year,Distress Signal,No Historical Comparison
+BANKBARODA,Bank of Baroda,Previous Year,Distress Signal,No Historical Comparison
+BEL,Bharat Electronics Ltd,Previous Year,Deleveraging,No Historical Comparison
+BHARTIARTL,Bharti Airtel Ltd,Previous Year,Deleveraging,No Historical Comparison
+BHEL,"Bharat Heavy Electricals Limited
+",Previous Year,Distress Signal,No Historical Comparison
+BOSCHLTD,Bosch Ltd,Previous Year,Deleveraging,No Historical Comparison
+BPCL,Bharat Petroleum Corporation Ltd,Previous Year,Deleveraging,No Historical Comparison
+BRITANNIA,Britannia Industries Ltd,Previous Year,Deleveraging,No Historical Comparison
+CANBK,Canara Bank,Previous Year,Deleveraging,No Historical Comparison
+CHOLAFIN,Cholamandalam Investment & Finance Company Ltd,Previous Year,Distress Signal,No Historical Comparison
+CIPLA,"Cipla Ltd
+",Previous Year,Deleveraging,No Historical Comparison
+COALINDIA,Coal India Ltd,Previous Year,Deleveraging,No Historical Comparison
+DABUR,Dabur India Ltd,Previous Year,Deleveraging,No Historical Comparison
+DIVISLAB,Divis Laboratories Ltd,Previous Year,Deleveraging,No Historical Comparison
+DLF,DLF Ltd,Previous Year,Growth Investment,No Historical Comparison
+DMART,Avenue Supermarts Ltd,Previous Year,Deleveraging,No Historical Comparison
+DRREDDY,Dr Reddys Laboratories Ltd,Previous Year,Deleveraging,No Historical Comparison
+EICHERMOT,Eicher Motors Ltd,Previous Year,Deleveraging,No Historical Comparison
+GAIL,GAIL (India) Ltd,Previous Year,Deleveraging,No Historical Comparison
+GODREJCP,Godrej Consumer Products Ltd,Previous Year,Growth Investment,No Historical Comparison
+GRASIM,Grasim Industries Ltd,Previous Year,Distress Signal,No Historical Comparison
+HAL,Hindustan Aeronautics Ltd,Previous Year,Deleveraging,No Historical Comparison
+HAVELLS,Havells India Ltd,Previous Year,Deleveraging,No Historical Comparison
+HCLTECH,HCL Technologies Ltd,Previous Year,Deleveraging,No Historical Comparison
+HDFCBANK,HDFC Bank Ltd,Previous Year,Deleveraging,No Historical Comparison
+HDFCLIFE,HDFC Life Insurance Company Ltd,Previous Year,Deleveraging,No Historical Comparison
+HEROMOTOCO,"Hero MotoCorp Ltd
+",Previous Year,Deleveraging,No Historical Comparison
+HINDALCO,Hindalco Industries Ltd,Previous Year,Deleveraging,No Historical Comparison
+HINDUNILVR,"Hindustan Unilever Ltd
+",Previous Year,Deleveraging,No Historical Comparison
+ICICIBANK,ICICI Bank Ltd,Previous Year,Growth Investment,No Historical Comparison
+ICICIGI,ICICI Lombard General Insurance Company Ltd,Previous Year,Deleveraging,No Historical Comparison
+ICICIPRULI,ICICI Prudential Life Insurance Company Ltd,Previous Year,Deleveraging,No Historical Comparison
+INDIGO,Interglobe Aviation Ltd,Previous Year,Deleveraging,No Historical Comparison
+INDUSINDBK,IndusInd Bank Ltd,Previous Year,Deleveraging,No Historical Comparison
+INFY,Infosys Ltd,Previous Year,Deleveraging,No Historical Comparison
+IOC,"Indian Oil Corporation
+",Previous Year,Deleveraging,No Historical Comparison
+IRCTC,Indian Railway Catering & Tourism Corporation Ltd,Previous Year,Deleveraging,No Historical Comparison
+IRFC,Indian Railway Finance Corporation Ltd,Previous Year,Deleveraging,No Historical Comparison
+ITC,"ITC Ltd
+",Previous Year,Deleveraging,No Historical Comparison
+JINDALSTEL,Jindal Steel & Power Ltd,Previous Year,Growth Investment,No Historical Comparison
+JIOFIN,Jio Financial Services Ltd,Previous Year,Deleveraging,No Historical Comparison
+JSWENERGY,JSW Energy Ltd,Previous Year,Growth Investment,No Historical Comparison
+JSWSTEEL,JSW Steel Ltd,Previous Year,Deleveraging,No Historical Comparison
+KOTAKBANK,"Kotak Mahindra Bank Ltd
+",Previous Year,Growth Investment,No Historical Comparison
+LICI,Life Insurance Corporation of India,Previous Year,Deleveraging,No Historical Comparison
+LODHA,Macrotech Developers Ltd,Previous Year,Growth Investment,No Historical Comparison
+LT,Larsen & Toubro Ltd,Previous Year,Deleveraging,No Historical Comparison
+LTIM,LTIMindtree Ltd,Previous Year,Deleveraging,No Historical Comparison
+M&M,"Mahindra & Mahindra Ltd
+",Previous Year,Distress Signal,No Historical Comparison
+MARUTI,Maruti Suzuki India Ltd,Previous Year,Deleveraging,No Historical Comparison
+MOTHERSON,Samvardhana Motherson International Ltd,Previous Year,Growth Investment,No Historical Comparison
+NAUKRI,Info Edge (India) Ltd,Previous Year,Growth Investment,No Historical Comparison
+NESTLEIND,Nestle India Ltd,Previous Year,Deleveraging,No Historical Comparison
+NHPC,"NHPC Ltd
+",Previous Year,Deleveraging,No Historical Comparison
+NTPC,NTPC Ltd,Previous Year,Deleveraging,No Historical Comparison
+ONGC,Oil & Natural Gas Corpn Ltd,Previous Year,Deleveraging,No Historical Comparison
+PFC,Power Finance Corporation Ltd,Previous Year,Distress Signal,No Historical Comparison
+PIDILITIND,Pidilite Industries Ltd,Previous Year,Deleveraging,No Historical Comparison
+PNB,Punjab National Bank,Previous Year,Distress Signal,No Historical Comparison
+POWERGRID,Power Grid Corporation of India Ltd,Previous Year,Deleveraging,No Historical Comparison
+RECLTD,REC Ltd,Previous Year,Distress Signal,No Historical Comparison
+RELIANCE,"Reliance Industries Ltd
+",Previous Year,Deleveraging,No Historical Comparison
+SBILIFE,SBI Life Insurance Company Ltd,Previous Year,Deleveraging,No Historical Comparison
+SBIN,State Bank of India,Previous Year,Deleveraging,No Historical Comparison
+SHREECEM,Shree Cement Ltd,Previous Year,Deleveraging,No Historical Comparison
+SHRIRAMFIN,"Shriram Finance Ltd
+",Previous Year,Distress Signal,No Historical Comparison
+SUNPHARMA,Sun Pharmaceuticals Industries Ltd,Previous Year,Deleveraging,No Historical Comparison
+TATACONSUM,Tata Consumer Products Ltd,Previous Year,Growth Investment,No Historical Comparison
+TATAMOTORS,Tata Motors Ltd,Previous Year,Deleveraging,No Historical Comparison
+TATAPOWER,"Tata Power Company Ltd
+",Previous Year,Deleveraging,No Historical Comparison
+TATASTEEL,"Tata Steel Ltd
+",Previous Year,Deleveraging,No Historical Comparison
+TCS,Tata Consultancy Services Ltd,Previous Year,Deleveraging,No Historical Comparison
+TECHM,Tech Mahindra Ltd,Previous Year,Deleveraging,No Historical Comparison
+TITAN,"Titan Company Ltd
+",Previous Year,Deleveraging,No Historical Comparison
+TORNTPHARM,Torrent Pharmaceuticals Ltd,Previous Year,Deleveraging,No Historical Comparison
+TRENT,Trent Ltd,Previous Year,Deleveraging,No Historical Comparison
+TVSMOTOR,TVS Motor Company Ltd,Previous Year,Distress Signal,No Historical Comparison

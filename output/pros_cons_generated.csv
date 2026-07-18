@@ -1,0 +1,313 @@
+company_id,type,rule_id,text,confidence_pct
+ABB,con,CON99,Future financial performance should continue to be monitored.,65
+ABB,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+ABB,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+ABB,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+ABB,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+ADANIENSOL,con,CON04,Low net profit margin indicates weak profitability.,88
+ADANIENSOL,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+ADANIENT,con,CON99,Future financial performance should continue to be monitored.,65
+ADANIENT,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+ADANIGREEN,con,CON99,Future financial performance should continue to be monitored.,65
+ADANIGREEN,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+ADANIGREEN,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+ADANIPORTS,con,CON99,Future financial performance should continue to be monitored.,65
+ADANIPORTS,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+ADANIPORTS,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+ADANIPORTS,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+ADANIPOWER,con,CON99,Future financial performance should continue to be monitored.,65
+ADANIPOWER,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+ADANIPOWER,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+ADANIPOWER,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+AMBUJACEM,con,CON99,Future financial performance should continue to be monitored.,65
+AMBUJACEM,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+APOLLOHOSP,con,CON99,Future financial performance should continue to be monitored.,65
+APOLLOHOSP,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+ASIANPAINT,con,CON99,Future financial performance should continue to be monitored.,65
+ASIANPAINT,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+ASIANPAINT,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+ATGL,con,CON99,Future financial performance should continue to be monitored.,65
+ATGL,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+AXISBANK,con,CON99,Future financial performance should continue to be monitored.,65
+AXISBANK,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+AXISBANK,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+AXISBANK,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+BAJAJ-AUTO,con,CON99,Future financial performance should continue to be monitored.,65
+BAJAJ-AUTO,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+BAJAJ-AUTO,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+BAJAJ-AUTO,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+BAJAJFINSV,con,CON99,Future financial performance should continue to be monitored.,65
+BAJAJFINSV,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+BAJAJFINSV,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+BAJAJHLDNG,con,CON99,Future financial performance should continue to be monitored.,65
+BAJAJHLDNG,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+BAJAJHLDNG,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+BAJAJHLDNG,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+BAJAJHLDNG,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+BAJFINANCE,con,CON99,Future financial performance should continue to be monitored.,65
+BAJFINANCE,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+BAJFINANCE,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+BAJFINANCE,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+BAJFINANCE,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+BANKBARODA,con,CON99,Future financial performance should continue to be monitored.,65
+BANKBARODA,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+BANKBARODA,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+BANKBARODA,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+BEL,con,CON99,Future financial performance should continue to be monitored.,65
+BEL,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+BEL,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+BEL,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+BHARTIARTL,con,CON99,Future financial performance should continue to be monitored.,65
+BHARTIARTL,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+BHARTIARTL,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+BHEL,con,CON03,Operating margin is relatively low and may indicate pricing pressure.,90
+BHEL,con,CON04,Low net profit margin indicates weak profitability.,88
+BHEL,con,CON10,Low earnings per share limits shareholder value creation.,75
+BHEL,pro,PRO99,Business demonstrates stable operating performance.,65
+BOSCHLTD,con,CON99,Future financial performance should continue to be monitored.,65
+BOSCHLTD,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+BOSCHLTD,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+BPCL,con,CON03,Operating margin is relatively low and may indicate pricing pressure.,90
+BPCL,con,CON04,Low net profit margin indicates weak profitability.,88
+BPCL,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+BRITANNIA,con,CON99,Future financial performance should continue to be monitored.,65
+BRITANNIA,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+BRITANNIA,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+CANBK,con,CON99,Future financial performance should continue to be monitored.,65
+CANBK,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+CHOLAFIN,con,CON99,Future financial performance should continue to be monitored.,65
+CHOLAFIN,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+CHOLAFIN,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+CHOLAFIN,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+CHOLAFIN,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+CIPLA,con,CON99,Future financial performance should continue to be monitored.,65
+CIPLA,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+CIPLA,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+CIPLA,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+CIPLA,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+COALINDIA,con,CON99,Future financial performance should continue to be monitored.,65
+COALINDIA,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+COALINDIA,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+COALINDIA,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+COALINDIA,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+DABUR,con,CON99,Future financial performance should continue to be monitored.,65
+DABUR,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+DIVISLAB,con,CON99,Future financial performance should continue to be monitored.,65
+DIVISLAB,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+DIVISLAB,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+DIVISLAB,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+DIVISLAB,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+DLF,con,CON99,Future financial performance should continue to be monitored.,65
+DLF,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+DLF,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+DMART,con,CON03,Operating margin is relatively low and may indicate pricing pressure.,90
+DMART,con,CON04,Low net profit margin indicates weak profitability.,88
+DMART,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+DMART,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+DRREDDY,con,CON99,Future financial performance should continue to be monitored.,65
+DRREDDY,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+DRREDDY,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+DRREDDY,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+DRREDDY,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+EICHERMOT,con,CON99,Future financial performance should continue to be monitored.,65
+EICHERMOT,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+EICHERMOT,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+EICHERMOT,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+EICHERMOT,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+GAIL,con,CON99,Future financial performance should continue to be monitored.,65
+GAIL,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+GODREJCP,con,CON04,Low net profit margin indicates weak profitability.,88
+GODREJCP,con,CON10,Low earnings per share limits shareholder value creation.,75
+GODREJCP,pro,PRO99,Business demonstrates stable operating performance.,65
+GRASIM,con,CON99,Future financial performance should continue to be monitored.,65
+GRASIM,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+HAL,con,CON99,Future financial performance should continue to be monitored.,65
+HAL,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+HAL,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+HAL,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+HAL,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+HAVELLS,con,CON03,Operating margin is relatively low and may indicate pricing pressure.,90
+HAVELLS,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+HAVELLS,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+HCLTECH,con,CON99,Future financial performance should continue to be monitored.,65
+HCLTECH,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+HCLTECH,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+HDFCBANK,con,CON05,Interest coverage below 1.5x suggests financial stress.,95
+HDFCBANK,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+HDFCBANK,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+HDFCBANK,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+HDFCLIFE,con,CON04,Low net profit margin indicates weak profitability.,88
+HDFCLIFE,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+HDFCLIFE,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+HEROMOTOCO,con,CON99,Future financial performance should continue to be monitored.,65
+HEROMOTOCO,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+HEROMOTOCO,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+HEROMOTOCO,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+HINDALCO,con,CON99,Future financial performance should continue to be monitored.,65
+HINDALCO,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+HINDALCO,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+HINDALCO,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+HINDUNILVR,con,CON99,Future financial performance should continue to be monitored.,65
+HINDUNILVR,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+HINDUNILVR,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+HINDUNILVR,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+HINDUNILVR,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+ICICIBANK,con,CON05,Interest coverage below 1.5x suggests financial stress.,95
+ICICIBANK,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+ICICIBANK,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+ICICIBANK,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+ICICIGI,con,CON05,Interest coverage below 1.5x suggests financial stress.,95
+ICICIGI,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+ICICIGI,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+ICICIPRULI,con,CON04,Low net profit margin indicates weak profitability.,88
+ICICIPRULI,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+ICICIPRULI,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+INDIGO,con,CON99,Future financial performance should continue to be monitored.,65
+INDIGO,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+INDIGO,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+INDIGO,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+INDUSINDBK,con,CON99,Future financial performance should continue to be monitored.,65
+INDUSINDBK,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+INDUSINDBK,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+INDUSINDBK,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+INFY,con,CON99,Future financial performance should continue to be monitored.,65
+INFY,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+INFY,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+INFY,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+IOC,con,CON03,Operating margin is relatively low and may indicate pricing pressure.,90
+IOC,con,CON04,Low net profit margin indicates weak profitability.,88
+IOC,pro,PRO99,Business demonstrates stable operating performance.,65
+IRCTC,con,CON99,Future financial performance should continue to be monitored.,65
+IRCTC,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+IRCTC,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+IRCTC,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+IRFC,con,CON05,Interest coverage below 1.5x suggests financial stress.,95
+IRFC,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+IRFC,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+ITC,con,CON99,Future financial performance should continue to be monitored.,65
+ITC,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+ITC,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+ITC,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+JINDALSTEL,con,CON99,Future financial performance should continue to be monitored.,65
+JINDALSTEL,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+JIOFIN,con,CON10,Low earnings per share limits shareholder value creation.,75
+JIOFIN,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+JIOFIN,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+JSWENERGY,con,CON99,Future financial performance should continue to be monitored.,65
+JSWENERGY,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+JSWENERGY,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+JSWSTEEL,con,CON04,Low net profit margin indicates weak profitability.,88
+JSWSTEEL,pro,PRO99,Business demonstrates stable operating performance.,65
+KOTAKBANK,con,CON05,Interest coverage below 1.5x suggests financial stress.,95
+KOTAKBANK,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+KOTAKBANK,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+KOTAKBANK,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+LICI,con,CON03,Operating margin is relatively low and may indicate pricing pressure.,90
+LICI,con,CON04,Low net profit margin indicates weak profitability.,88
+LICI,pro,PRO99,Business demonstrates stable operating performance.,65
+LODHA,con,CON99,Future financial performance should continue to be monitored.,65
+LODHA,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+LODHA,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+LODHA,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+LT,con,CON99,Future financial performance should continue to be monitored.,65
+LT,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+LTIM,con,CON99,Future financial performance should continue to be monitored.,65
+LTIM,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+LTIM,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+M&M,con,CON99,Future financial performance should continue to be monitored.,65
+M&M,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+MARUTI,con,CON99,Future financial performance should continue to be monitored.,65
+MARUTI,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+MARUTI,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+MOTHERSON,con,CON03,Operating margin is relatively low and may indicate pricing pressure.,90
+MOTHERSON,con,CON04,Low net profit margin indicates weak profitability.,88
+MOTHERSON,pro,PRO99,Business demonstrates stable operating performance.,65
+NAUKRI,con,CON99,Future financial performance should continue to be monitored.,65
+NAUKRI,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+NAUKRI,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+NAUKRI,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+NAUKRI,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+NESTLEIND,con,CON99,Future financial performance should continue to be monitored.,65
+NESTLEIND,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+NESTLEIND,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+NESTLEIND,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+NHPC,con,CON10,Low earnings per share limits shareholder value creation.,75
+NHPC,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+NHPC,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+NTPC,con,CON99,Future financial performance should continue to be monitored.,65
+NTPC,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+NTPC,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+ONGC,con,CON99,Future financial performance should continue to be monitored.,65
+ONGC,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+PFC,con,CON05,Interest coverage below 1.5x suggests financial stress.,95
+PFC,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+PFC,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+PFC,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+PIDILITIND,con,CON99,Future financial performance should continue to be monitored.,65
+PIDILITIND,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+PIDILITIND,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+PIDILITIND,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+PNB,con,CON99,Future financial performance should continue to be monitored.,65
+PNB,pro,PRO99,Business demonstrates stable operating performance.,65
+POWERGRID,con,CON99,Future financial performance should continue to be monitored.,65
+POWERGRID,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+POWERGRID,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+RECLTD,con,CON99,Future financial performance should continue to be monitored.,65
+RECLTD,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+RECLTD,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+RECLTD,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+RELIANCE,con,CON99,Future financial performance should continue to be monitored.,65
+RELIANCE,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+SBILIFE,con,CON03,Operating margin is relatively low and may indicate pricing pressure.,90
+SBILIFE,con,CON04,Low net profit margin indicates weak profitability.,88
+SBILIFE,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+SBIN,con,CON03,Operating margin is relatively low and may indicate pricing pressure.,90
+SBIN,con,CON05,Interest coverage below 1.5x suggests financial stress.,95
+SBIN,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+SBIN,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+SHREECEM,con,CON99,Future financial performance should continue to be monitored.,65
+SHREECEM,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+SHREECEM,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+SHRIRAMFIN,con,CON05,Interest coverage below 1.5x suggests financial stress.,95
+SHRIRAMFIN,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+SHRIRAMFIN,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+SHRIRAMFIN,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+SIEMENS,con,CON99,Future financial performance should continue to be monitored.,65
+SIEMENS,pro,PRO03,Positive free cash flow indicates healthy business fundamentals.,90
+SIEMENS,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+SIEMENS,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+SIEMENS,pro,PRO10,Positive operating cash flow supports business sustainability.,84
+SUNPHARMA,con,CON99,Future financial performance should continue to be monitored.,65
+SUNPHARMA,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+SUNPHARMA,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+SUNPHARMA,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+SUNPHARMA,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+TATACONSUM,con,CON99,Future financial performance should continue to be monitored.,65
+TATACONSUM,pro,PRO99,Business demonstrates stable operating performance.,65
+TATAMOTORS,con,CON99,Future financial performance should continue to be monitored.,65
+TATAMOTORS,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+TATAPOWER,con,CON99,Future financial performance should continue to be monitored.,65
+TATAPOWER,pro,PRO99,Business demonstrates stable operating performance.,65
+TATASTEEL,con,CON04,Low net profit margin indicates weak profitability.,88
+TATASTEEL,con,CON10,Low earnings per share limits shareholder value creation.,75
+TATASTEEL,pro,PRO99,Business demonstrates stable operating performance.,65
+TCS,con,CON99,Future financial performance should continue to be monitored.,65
+TCS,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+TCS,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+TCS,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+TCS,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+TECHM,con,CON99,Future financial performance should continue to be monitored.,65
+TECHM,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+TECHM,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+TITAN,con,CON03,Operating margin is relatively low and may indicate pricing pressure.,90
+TITAN,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+TORNTPHARM,con,CON99,Future financial performance should continue to be monitored.,65
+TORNTPHARM,pro,PRO04,Operating margin above 25% reflects pricing power and cost discipline.,88
+TORNTPHARM,pro,PRO05,Healthy net profit margin supports sustainable profitability.,86
+TORNTPHARM,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+TORNTPHARM,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+TRENT,con,CON99,Future financial performance should continue to be monitored.,65
+TRENT,pro,PRO06,High interest coverage indicates negligible debt servicing risk.,90
+TRENT,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
+TVSMOTOR,con,CON04,Low net profit margin indicates weak profitability.,88
+TVSMOTOR,pro,PRO08,Strong earnings per share reflects shareholder value creation.,80
