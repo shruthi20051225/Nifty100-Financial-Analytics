@@ -331,10 +331,264 @@ streamlit run app.py
 * Portfolio tracking
 
 ---
+---
+
+# Sprint 5 – NLP Intelligence & Automated Reporting
+
+## Objectives
+
+* Build an NLP engine to extract financial insights.
+* Generate automated Pros & Cons for every company.
+* Develop Cash Flow Intelligence metrics.
+* Generate professional company and sector PDF reports.
+* Create a portfolio summary report.
+
+## NLP Module
+
+### Implemented
+
+* Financial analysis parser
+* Automated Pros & Cons generator
+* Confidence score calculation
+* Rule-based financial insights
+
+### Outputs
+
+* analysis_parsed.csv
+* parse_failures.csv
+* pros_cons_generated.csv
+
+---
+
+# Cash Flow Intelligence
+
+Computed:
+
+* CFO Quality Score
+* CFO Quality Classification
+* CapEx Intensity
+* Free Cash Flow Conversion
+* Distress Signal Detection
+* Deleveraging Detection
+* Capital Allocation Classification
+
+Generated:
+
+* cashflow_intelligence.xlsx
+* distress_alerts.csv
+
+---
+
+# Automated Reports
+
+Generated:
+
+### Company Reports
+
+* Two-page Company Tearsheets
+
+### Sector Reports
+
+* Sector-wise Financial Reports
+
+### Portfolio Report
+
+* Portfolio Summary PDF
+
+---
+
+# Outputs Generated
+
+## Excel Reports
+
+* cashflow_intelligence.xlsx
+
+## CSV Reports
+
+* analysis_parsed.csv
+* parse_failures.csv
+* pros_cons_generated.csv
+* distress_alerts.csv
+
+## PDF Reports
+
+* Company Tearsheets
+* Sector Reports
+* Portfolio Summary
+
+---
+
+# Key Features Added
+
+* NLP Financial Analysis
+* Automated Pros & Cons
+* Cash Flow Intelligence
+* Capital Allocation Analytics
+* Company PDF Tearsheets
+* Sector Reports
+* Portfolio Summary Report
+
+# Sprint 6 – Clustering, REST API, Testing & Final Project Validation
+
+## Objectives
+
+Sprint 6 focused on completing the analytics platform by implementing machine learning-based company clustering, developing REST APIs using FastAPI, performing automated testing with Pytest, optimizing database performance, and preparing the project for final deployment and documentation.
+
+---
+
+## Machine Learning & Analytics
+
+### KMeans Company Clustering
+
+Implemented KMeans clustering to classify Nifty 100 companies into financial archetypes using key financial metrics.
+
+### Features Used
+
+- Return on Equity (ROE)
+- Debt to Equity Ratio
+- Operating Profit Margin
+- Asset Turnover
+- Free Cash Flow
+
+### Outputs Generated
+
+- `cluster_labels.csv`
+- `cluster_profile.csv`
+- `portfolio_stats.csv`
+- `outlier_report.csv`
+- `elbow_plot.png`
+- `correlation_heatmap.png`
+
+---
+
+## REST API Development (FastAPI)
+
+Developed a REST API layer for accessing financial data through standardized endpoints.
+
+### API Modules
+
+- Health API
+- Companies API
+- Financial Ratios API
+- Profit & Loss API
+- Balance Sheet API
+- Cash Flow API
+- Screener API
+- Sector API
+- Peer Comparison API
+- Market Capitalization API
+- Documents API
+- Portfolio Statistics API
+
+### Features
+
+- OpenAPI (Swagger) Documentation
+- JSON Responses
+- SQLite Integration
+- Request Logging
+- CORS Middleware
+
+---
+
+## Automated Testing
+
+Implemented automated testing using Pytest.
+
+### Test Modules
+
+- ETL Tests
+- Financial KPI Tests
+- Data Quality Tests
+- Health API Tests
+- Companies API Tests
+- Screener API Tests
+- Sector API Tests
+- Peer API Tests
+
+### Outputs
+
+- `pytest_report.html`
+
+---
+
+## Performance Optimization
+
+Optimized SQLite database performance by creating indexes on frequently queried columns.
+
+### Database Optimization
+
+Indexes created for:
+
+- Financial Ratios
+- Profit & Loss
+- Balance Sheet
+- Cash Flow
+- Market Capitalization
+- Sectors
+- Peer Groups
+
+### Performance Testing
+
+- Concurrent API Load Testing
+- Dashboard Integration Testing
+- Streamlit + FastAPI Compatibility Testing
+- Performance Notes Documentation
+
+Outputs:
+
+- `perf_notes.md`
+- `performance_summary.txt`
+
+---
+
+## Documentation
+
+Prepared project documentation including:
+
+- Analyst Guide (PDF)
+- Updated README
+- OpenAPI Specification
+- Acceptance Checklist
+
+---
+
+## Deliverables
+
+### Reports
+
+- cluster_labels.csv
+- cluster_profile.csv
+- portfolio_stats.csv
+- outlier_report.csv
+- elbow_plot.png
+- correlation_heatmap.png
+
+### APIs
+
+- FastAPI Server
+- OpenAPI Documentation
+- REST Endpoints
+
+### Testing
+
+- Pytest Test Suite
+- HTML Test Report
+
+### Documentation
+
+- Analyst Guide
+- Acceptance Checklist
+- Performance Notes
+
+---
+
+## Sprint 6 Summary
+
+Sprint 6 completed the Nifty100 Financial Analytics Platform by integrating machine learning, REST APIs, automated testing, performance optimization, and comprehensive documentation. The platform now supports financial analysis, company screening, peer benchmarking, clustering, valuation analytics, and interactive dashboard visualization through both a web interface and REST API.
 
 # Author
 
-**Shruthi Meena**
+**Shruthi Meena R**
 
 Nifty100 Financial Analytics Platform
 

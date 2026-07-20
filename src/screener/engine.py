@@ -2,7 +2,6 @@ import sqlite3
 import yaml
 import pandas as pd
 
-
 DB_PATH = "nifty100.db"
 
 
@@ -10,10 +9,7 @@ class ScreenerEngine:
 
     def __init__(self):
 
-        with open(
-            "config/screener_config.yaml",
-            "r"
-        ) as f:
+        with open("config/screener_config.yaml", "r") as f:
 
             self.config = yaml.safe_load(f)
 
@@ -37,33 +33,23 @@ class ScreenerEngine:
 
         if "return_on_equity_pct" in df.columns:
 
-            df = df[
-                df["return_on_equity_pct"] >= cfg["roe_min"]
-            ]
+            df = df[df["return_on_equity_pct"] >= cfg["roe_min"]]
 
         if "debt_to_equity" in df.columns:
 
-            df = df[
-                df["debt_to_equity"] <= cfg["de_max"]
-            ]
+            df = df[df["debt_to_equity"] <= cfg["de_max"]]
 
         if "free_cash_flow_cr" in df.columns:
 
-            df = df[
-                df["free_cash_flow_cr"] >= cfg["fcf_min"]
-            ]
+            df = df[df["free_cash_flow_cr"] >= cfg["fcf_min"]]
 
         if "asset_turnover" in df.columns:
 
-            df = df[
-                df["asset_turnover"] >= cfg["asset_turnover_min"]
-            ]
+            df = df[df["asset_turnover"] >= cfg["asset_turnover_min"]]
 
         if "operating_profit_margin_pct" in df.columns:
 
-            df = df[
-                df["operating_profit_margin_pct"] >= cfg["opm_min"]
-            ]
+            df = df[df["operating_profit_margin_pct"] >= cfg["opm_min"]]
 
         return df
 
@@ -89,10 +75,7 @@ class ScreenerEngine:
 
         df["composite_quality_score"] = score
 
-        df = df.sort_values(
-            "composite_quality_score",
-            ascending=False
-        )
+        df = df.sort_values("composite_quality_score", ascending=False)
 
         return df
 

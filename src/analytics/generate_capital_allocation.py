@@ -1,9 +1,7 @@
 import sqlite3
 import pandas as pd
 
-from src.analytics.cashflow_kpis import (
-    capital_allocation_pattern
-)
+from src.analytics.cashflow_kpis import capital_allocation_pattern
 
 conn = sqlite3.connect("nifty100.db")
 
@@ -29,27 +27,22 @@ for _, row in df.iterrows():
     cfi = row["investing_activity"]
     cff = row["financing_activity"]
 
-    pattern = capital_allocation_pattern(
-        cfo,
-        cfi,
-        cff
-    )
+    pattern = capital_allocation_pattern(cfo, cfi, cff)
 
-    output.append({
-        "company_id": row["company_id"],
-        "year": row["year"],
-        "cfo_sign": "+" if cfo >= 0 else "-",
-        "cfi_sign": "+" if cfi >= 0 else "-",
-        "cff_sign": "+" if cff >= 0 else "-",
-        "pattern_label": pattern
-    })
+    output.append(
+        {
+            "company_id": row["company_id"],
+            "year": row["year"],
+            "cfo_sign": "+" if cfo >= 0 else "-",
+            "cfi_sign": "+" if cfi >= 0 else "-",
+            "cff_sign": "+" if cff >= 0 else "-",
+            "pattern_label": pattern,
+        }
+    )
 
 capital = pd.DataFrame(output)
 
-capital.to_csv(
-    "output/capital_allocation.csv",
-    index=False
-)
+capital.to_csv("output/capital_allocation.csv", index=False)
 
 print("capital_allocation.csv generated")
 print("Rows:", len(capital))

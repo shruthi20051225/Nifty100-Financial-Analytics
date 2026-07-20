@@ -7,23 +7,29 @@ import pandas as pd
 conn = sqlite3.connect("nifty100.db")
 
 # Companies
-companies = pd.read_sql("""
+companies = pd.read_sql(
+    """
 SELECT
     id,
     company_name,
     roe_percentage,
     roce_percentage
 FROM companies
-""", conn)
+""",
+    conn,
+)
 
 # Financial ratios
-ratios = pd.read_sql("""
+ratios = pd.read_sql(
+    """
 SELECT
     company_id,
     year,
     return_on_equity_pct
 FROM financial_ratios
-""", conn)
+""",
+    conn,
+)
 
 conn.close()
 
@@ -33,43 +39,26 @@ conn.close()
 ratios = ratios[ratios["year"] != "TTM"].copy()
 
 # Convert dates safely
-ratios["year"] = pd.to_datetime(
-    ratios["year"],
-    errors="coerce"
-)
+ratios["year"] = pd.to_datetime(ratios["year"], errors="coerce")
 
 ratios = ratios.dropna(subset=["year"])
 
 # ----------------------------
 # Latest year only
 # ----------------------------
-latest = (
-    ratios
-    .sort_values("year")
-    .groupby("company_id")
-    .tail(1)
-)
+latest = ratios.sort_values("year").groupby("company_id").tail(1)
 
 # ----------------------------
 # Merge
 # ----------------------------
-merged = companies.merge(
-    latest,
-    left_on="id",
-    right_on="company_id",
-    how="inner"
-)
+merged = companies.merge(latest, left_on="id", right_on="company_id", how="inner")
 
 # ----------------------------
 # Write log
 # ----------------------------
 count = 0
 
-with open(
-    "output/ratio_edge_cases.log",
-    "w",
-    encoding="utf-8"
-) as log:
+with open("output/ratio_edge_cases.log", "w", encoding="utf-8") as log:
 
     log.write("RATIO EDGE CASES\n")
     log.write("=" * 60 + "\n\n")
@@ -82,10 +71,7 @@ with open(
         if pd.isna(row["return_on_equity_pct"]):
             continue
 
-        diff = abs(
-            row["roe_percentage"] -
-            row["return_on_equity_pct"]
-        )
+        diff = abs(row["roe_percentage"] - row["return_on_equity_pct"])
 
         if diff > 5:
 
@@ -96,33 +82,19 @@ with open(
             else:
                 category = "Formula Discrepancy"
 
-            log.write(
-                f"Company : {row['company_name']}\n"
-            )
+            log.write(f"Company : {row['company_name']}\n")
 
-            log.write(
-                f"Company ID : {row['id']}\n"
-            )
+            log.write(f"Company ID : {row['id']}\n")
 
-            log.write(
-                f"Latest Year : {row['year'].date()}\n"
-            )
+            log.write(f"Latest Year : {row['year'].date()}\n")
 
-            log.write(
-                f"Source ROE : {row['roe_percentage']}\n"
-            )
+            log.write(f"Source ROE : {row['roe_percentage']}\n")
 
-            log.write(
-                f"Calculated ROE : {row['return_on_equity_pct']}\n"
-            )
+            log.write(f"Calculated ROE : {row['return_on_equity_pct']}\n")
 
-            log.write(
-                f"Difference : {diff:.2f}%\n"
-            )
+            log.write(f"Difference : {diff:.2f}%\n")
 
-            log.write(
-                f"Category : {category}\n"
-            )
+            log.write(f"Category : {category}\n")
 
             log.write("-" * 60 + "\n")
 

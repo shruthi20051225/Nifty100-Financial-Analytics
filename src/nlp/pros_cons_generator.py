@@ -11,14 +11,10 @@ os.makedirs(OUTPUT, exist_ok=True)
 conn = sqlite3.connect(DB)
 
 companies = pd.read_sql(
-    "SELECT id, company_name, roe_percentage, roce_percentage FROM companies",
-    conn
+    "SELECT id, company_name, roe_percentage, roce_percentage FROM companies", conn
 )
 
-ratios = pd.read_sql(
-    "SELECT * FROM financial_ratios",
-    conn
-)
+ratios = pd.read_sql("SELECT * FROM financial_ratios", conn)
 
 conn.close()
 
@@ -40,19 +36,15 @@ rows = []
 
 def add(company, typ, rule, text, confidence):
 
-    rows.append({
-
-        "company_id": company,
-
-        "type": typ,
-
-        "rule_id": rule,
-
-        "text": text,
-
-        "confidence_pct": confidence
-
-    })
+    rows.append(
+        {
+            "company_id": company,
+            "type": typ,
+            "rule_id": rule,
+            "text": text,
+            "confidence_pct": confidence,
+        }
+    )
 
 
 for _, company in companies.iterrows():
@@ -89,7 +81,7 @@ for _, company in companies.iterrows():
             "pro",
             "PRO01",
             "Consistently high return on equity demonstrates exceptional capital efficiency.",
-            95
+            95,
         )
 
         pro_count += 1
@@ -103,7 +95,7 @@ for _, company in companies.iterrows():
             "pro",
             "PRO02",
             "Debt-free balance sheet provides strong financial flexibility.",
-            94
+            94,
         )
 
         pro_count += 1
@@ -117,7 +109,7 @@ for _, company in companies.iterrows():
             "pro",
             "PRO03",
             "Positive free cash flow indicates healthy business fundamentals.",
-            90
+            90,
         )
 
         pro_count += 1
@@ -131,7 +123,7 @@ for _, company in companies.iterrows():
             "pro",
             "PRO04",
             "Operating margin above 25% reflects pricing power and cost discipline.",
-            88
+            88,
         )
 
         pro_count += 1
@@ -145,7 +137,7 @@ for _, company in companies.iterrows():
             "pro",
             "PRO05",
             "Healthy net profit margin supports sustainable profitability.",
-            86
+            86,
         )
 
         pro_count += 1
@@ -159,7 +151,7 @@ for _, company in companies.iterrows():
             "pro",
             "PRO06",
             "High interest coverage indicates negligible debt servicing risk.",
-            90
+            90,
         )
 
         pro_count += 1
@@ -173,7 +165,7 @@ for _, company in companies.iterrows():
             "pro",
             "PRO07",
             "Efficient asset utilization supports business growth.",
-            82
+            82,
         )
 
         pro_count += 1
@@ -187,7 +179,7 @@ for _, company in companies.iterrows():
             "pro",
             "PRO08",
             "Strong earnings per share reflects shareholder value creation.",
-            80
+            80,
         )
 
         pro_count += 1
@@ -203,7 +195,7 @@ for _, company in companies.iterrows():
                 "pro",
                 "PRO09",
                 "Balanced dividend payout policy supports long-term growth.",
-                80
+                80,
             )
 
             pro_count += 1
@@ -217,11 +209,11 @@ for _, company in companies.iterrows():
             "pro",
             "PRO10",
             "Positive operating cash flow supports business sustainability.",
-            84
+            84,
         )
 
         pro_count += 1
-            # ----------------------------
+        # ----------------------------
     # CON RULES
     # ----------------------------
 
@@ -232,7 +224,7 @@ for _, company in companies.iterrows():
             "con",
             "CON01",
             f"Debt-to-equity ratio of {de:.2f} is elevated and warrants monitoring.",
-            95
+            95,
         )
 
         con_count += 1
@@ -244,7 +236,7 @@ for _, company in companies.iterrows():
             "con",
             "CON02",
             "Negative free cash flow raises concern about cash generation quality.",
-            92
+            92,
         )
 
         con_count += 1
@@ -256,7 +248,7 @@ for _, company in companies.iterrows():
             "con",
             "CON03",
             "Operating margin is relatively low and may indicate pricing pressure.",
-            90
+            90,
         )
 
         con_count += 1
@@ -268,7 +260,7 @@ for _, company in companies.iterrows():
             "con",
             "CON04",
             "Low net profit margin indicates weak profitability.",
-            88
+            88,
         )
 
         con_count += 1
@@ -280,7 +272,7 @@ for _, company in companies.iterrows():
             "con",
             "CON05",
             "Interest coverage below 1.5x suggests financial stress.",
-            95
+            95,
         )
 
         con_count += 1
@@ -292,7 +284,7 @@ for _, company in companies.iterrows():
             "con",
             "CON06",
             "Low return on equity indicates inefficient capital utilization.",
-            85
+            85,
         )
 
         con_count += 1
@@ -304,7 +296,7 @@ for _, company in companies.iterrows():
             "con",
             "CON07",
             "Low asset turnover indicates inefficient utilization of assets.",
-            80
+            80,
         )
 
         con_count += 1
@@ -316,7 +308,7 @@ for _, company in companies.iterrows():
             "con",
             "CON08",
             "Dividend payout above 100% may not be sustainable.",
-            90
+            90,
         )
 
         con_count += 1
@@ -328,7 +320,7 @@ for _, company in companies.iterrows():
             "con",
             "CON09",
             "Negative operating cash flow weakens business quality.",
-            90
+            90,
         )
 
         con_count += 1
@@ -340,7 +332,7 @@ for _, company in companies.iterrows():
             "con",
             "CON10",
             "Low earnings per share limits shareholder value creation.",
-            75
+            75,
         )
 
         con_count += 1
@@ -356,7 +348,7 @@ for _, company in companies.iterrows():
             "pro",
             "PRO99",
             "Business demonstrates stable operating performance.",
-            65
+            65,
         )
 
     if con_count == 0:
@@ -366,7 +358,7 @@ for _, company in companies.iterrows():
             "con",
             "CON99",
             "Future financial performance should continue to be monitored.",
-            65
+            65,
         )
 
 # ==========================================
@@ -375,21 +367,11 @@ for _, company in companies.iterrows():
 
 output = pd.DataFrame(rows)
 
-output = output[
-    output["confidence_pct"] >= 60
-]
+output = output[output["confidence_pct"] >= 60]
 
-output = output.sort_values(
-    [
-        "company_id",
-        "type"
-    ]
-)
+output = output.sort_values(["company_id", "type"])
 
-output.to_csv(
-    "output/pros_cons_generated.csv",
-    index=False
-)
+output.to_csv("output/pros_cons_generated.csv", index=False)
 
 print("=" * 60)
 print("Pros & Cons Generator Completed")

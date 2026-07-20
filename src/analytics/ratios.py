@@ -1,9 +1,9 @@
 from typing import Optional
 
-
 # ==========================================================
 # DAY 08 – PROFITABILITY RATIOS
 # ==========================================================
+
 
 def net_profit_margin(net_profit: float, sales: float) -> Optional[float]:
     """Net Profit Margin (%)"""
@@ -12,10 +12,7 @@ def net_profit_margin(net_profit: float, sales: float) -> Optional[float]:
     return round((net_profit / sales) * 100, 2)
 
 
-def operating_profit_margin(
-    operating_profit: float,
-    sales: float
-) -> Optional[float]:
+def operating_profit_margin(operating_profit: float, sales: float) -> Optional[float]:
     """Operating Profit Margin (%)"""
     if sales == 0:
         return None
@@ -23,9 +20,7 @@ def operating_profit_margin(
 
 
 def return_on_equity(
-    net_profit: float,
-    equity_capital: float,
-    reserves: float
+    net_profit: float, equity_capital: float, reserves: float
 ) -> Optional[float]:
     """Return on Equity (%)"""
 
@@ -53,10 +48,7 @@ def return_on_capital_employed(
     return round((ebit / capital) * 100, 2)
 
 
-def return_on_assets(
-    net_profit: float,
-    total_assets: float
-) -> Optional[float]:
+def return_on_assets(net_profit: float, total_assets: float) -> Optional[float]:
     """Return on Assets (%)"""
 
     if total_assets == 0:
@@ -69,10 +61,9 @@ def return_on_assets(
 # DAY 09 – LEVERAGE & EFFICIENCY
 # ==========================================================
 
+
 def debt_to_equity(
-    borrowings: float,
-    equity_capital: float,
-    reserves: float
+    borrowings: float, equity_capital: float, reserves: float
 ) -> Optional[float]:
     """Debt to Equity Ratio"""
 
@@ -87,10 +78,7 @@ def debt_to_equity(
     return round(borrowings / equity, 2)
 
 
-def high_leverage_flag(
-    de_ratio: Optional[float],
-    broad_sector: str
-) -> bool:
+def high_leverage_flag(de_ratio: Optional[float], broad_sector: str) -> bool:
     """High leverage warning"""
 
     if de_ratio is None:
@@ -103,9 +91,7 @@ def high_leverage_flag(
 
 
 def interest_coverage(
-    operating_profit: float,
-    other_income: float,
-    interest: float
+    operating_profit: float, other_income: float, interest: float
 ) -> Optional[float]:
     """Interest Coverage Ratio"""
 
@@ -136,19 +122,13 @@ def interest_warning(icr):
     return icr < 1.5
 
 
-def net_debt(
-    borrowings: float,
-    investments: float
-) -> float:
+def net_debt(borrowings: float, investments: float) -> float:
     """Net Debt"""
 
     return borrowings - investments
 
 
-def asset_turnover(
-    sales: float,
-    total_assets: float
-) -> Optional[float]:
+def asset_turnover(sales: float, total_assets: float) -> Optional[float]:
     """Asset Turnover"""
 
     if total_assets == 0:

@@ -8,7 +8,6 @@ along with all required edge-case flags.
 
 from typing import Optional, Tuple
 
-
 # ==========================================================
 # Edge Case Flags
 # ==========================================================
@@ -25,10 +24,9 @@ INSUFFICIENT = "INSUFFICIENT"
 # Generic CAGR Calculator
 # ==========================================================
 
+
 def calculate_cagr(
-    start_value: float,
-    end_value: float,
-    years: int
+    start_value: float, end_value: float, years: int
 ) -> Tuple[Optional[float], str]:
     """
     CAGR Formula
@@ -65,45 +63,24 @@ def calculate_cagr(
 # Revenue CAGR
 # ==========================================================
 
-def revenue_cagr(
-    start_sales: float,
-    end_sales: float,
-    years: int
-):
-    return calculate_cagr(
-        start_sales,
-        end_sales,
-        years
-    )
+
+def revenue_cagr(start_sales: float, end_sales: float, years: int):
+    return calculate_cagr(start_sales, end_sales, years)
 
 
 # ==========================================================
 # PAT CAGR
 # ==========================================================
 
-def pat_cagr(
-    start_profit: float,
-    end_profit: float,
-    years: int
-):
-    return calculate_cagr(
-        start_profit,
-        end_profit,
-        years
-    )
+
+def pat_cagr(start_profit: float, end_profit: float, years: int):
+    return calculate_cagr(start_profit, end_profit, years)
 
 
 # ==========================================================
 # EPS CAGR
 # ==========================================================
 
-def eps_cagr(
-    start_eps: float,
-    end_eps: float,
-    years: int
-):
-    return calculate_cagr(
-        start_eps,
-        end_eps,
-        years
-    )
+
+def eps_cagr(start_eps: float, end_eps: float, years: int):
+    return calculate_cagr(start_eps, end_eps, years)

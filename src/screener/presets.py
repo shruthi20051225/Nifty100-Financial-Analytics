@@ -24,10 +24,7 @@ class PresetScreeners:
         if "price_to_earnings" not in df.columns:
             return df.head(0)
 
-        return df[
-            (df["price_to_earnings"] < 20)
-            & (df["debt_to_equity"] < 2)
-        ]
+        return df[(df["price_to_earnings"] < 20) & (df["debt_to_equity"] < 2)]
 
     def growth_accelerator(self):
 
@@ -36,9 +33,7 @@ class PresetScreeners:
         if "pat_cagr_5yr" not in df.columns:
             return df.head(0)
 
-        return df[
-            (df["pat_cagr_5yr"] > 20)
-        ]
+        return df[(df["pat_cagr_5yr"] > 20)]
 
     def dividend_champion(self):
 
@@ -48,18 +43,14 @@ class PresetScreeners:
             return df.head(0)
 
         return df[
-            (df["dividend_payout_ratio_pct"] < 80)
-            & (df["free_cash_flow_cr"] > 0)
+            (df["dividend_payout_ratio_pct"] < 80) & (df["free_cash_flow_cr"] > 0)
         ]
 
     def debt_free_bluechip(self):
 
         df = self.df.copy()
 
-        return df[
-            (df["debt_to_equity"] == 0)
-            & (df["return_on_equity_pct"] > 12)
-        ]
+        return df[(df["debt_to_equity"] == 0) & (df["return_on_equity_pct"] > 12)]
 
     def turnaround_watch(self):
 
@@ -68,6 +59,4 @@ class PresetScreeners:
         if "revenue_cagr_3yr" not in df.columns:
             return df.head(0)
 
-        return df[
-            df["revenue_cagr_3yr"] > 10
-        ]
+        return df[df["revenue_cagr_3yr"] > 10]

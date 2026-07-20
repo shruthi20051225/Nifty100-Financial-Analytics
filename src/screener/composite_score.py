@@ -27,15 +27,11 @@ def compute_composite_score(df):
 
     roe = normalize(df["return_on_equity_pct"])
 
-    roce = normalize(df["return_on_equity_pct"])      # replace later with ROCE column
+    roce = normalize(df["return_on_equity_pct"])  # replace later with ROCE column
 
     npm = normalize(df["net_profit_margin_pct"])
 
-    profitability = (
-        roe * 0.15
-        + roce * 0.10
-        + npm * 0.10
-    )
+    profitability = roe * 0.15 + roce * 0.10 + npm * 0.10
 
     # -------------------------
     # Cash Quality (30%)
@@ -47,11 +43,7 @@ def compute_composite_score(df):
 
     fcf_flag = (df["free_cash_flow_cr"] > 0).astype(int) * 100
 
-    cash_quality = (
-        fcf * 0.15
-        + cfo * 0.10
-        + fcf_flag * 0.05
-    )
+    cash_quality = fcf * 0.15 + cfo * 0.10 + fcf_flag * 0.05
 
     # -------------------------
     # Growth (20%)
@@ -67,10 +59,7 @@ def compute_composite_score(df):
     else:
         pat = 0
 
-    growth = (
-        revenue * 0.10
-        + pat * 0.10
-    )
+    growth = revenue * 0.10 + pat * 0.10
 
     # -------------------------
     # Leverage (15%)
@@ -80,16 +69,10 @@ def compute_composite_score(df):
 
     icr = normalize(df["interest_coverage"].fillna(999))
 
-    leverage = (
-        de * 0.10
-        + icr * 0.05
-    )
+    leverage = de * 0.10 + icr * 0.05
 
     df["composite_quality_score"] = (
-        profitability
-        + cash_quality
-        + growth
-        + leverage
+        profitability + cash_quality + growth + leverage
     ).round(2)
 
     return df

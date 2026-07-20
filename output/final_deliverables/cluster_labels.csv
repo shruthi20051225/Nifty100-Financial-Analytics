@@ -1,0 +1,118 @@
+company_id,company_name,broad_sector,cluster_id,cluster_name,distance_from_centroid
+SIEMENS,Siemens Ltd,Industrials,0,High-Quality Compounders,0.2946
+ABB,Abbott India Ltd,Industrials,0,High-Quality Compounders,0.3534
+ADANIENSOL,Adani Energy Solutions Ltd,Energy,0,High-Quality Compounders,0.3366
+ADANIENT,Adani Enterprises Ltd,Industrials,0,High-Quality Compounders,0.2993
+ADANIGREEN,Adani Green Energy Ltd,Energy,1,Defensive Dividend Payers,0.1287
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Industrials,1,Defensive Dividend Payers,0.6824
+ADANIPOWER,Adani Power Ltd,Energy,0,High-Quality Compounders,0.6622
+AMBUJACEM,Ambuja Cements Ltd,Materials,0,High-Quality Compounders,0.1353
+APOLLOHOSP,"Apollo Hospitals
+Chain of Indian private hospitals",Healthcare,0,High-Quality Compounders,0.3048
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Materials,0,High-Quality Compounders,0.0798
+ATGL,Adani Total Gas Ltd,Energy,0,High-Quality Compounders,0.1085
+BAJAJ-AUTO,Bajaj Auto Ltd,Consumer Discretionary,0,High-Quality Compounders,0.1305
+AXISBANK,Axis Bank Ltd,Financials,0,High-Quality Compounders,0.6086
+BAJAJFINSV,Bajaj Finserv Ltd,Financials,0,High-Quality Compounders,0.5732
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd,Financials,2,Value Cyclicals,0.0
+BAJFINANCE,Bajaj Finance Ltd,Financials,3,Emerging Growth,0.0933
+BANKBARODA,Bank of Baroda,Financials,0,High-Quality Compounders,0.627
+BHARTIARTL,Bharti Airtel Ltd,Communication Services,1,Defensive Dividend Payers,1.0067
+BEL,Bharat Electronics Ltd,Industrials,3,Emerging Growth,0.543
+BHEL,"Bharat Heavy Electricals Limited
+",Industrials,0,High-Quality Compounders,0.6641
+BOSCHLTD,Bosch Ltd,Consumer Discretionary,0,High-Quality Compounders,0.5755
+BPCL,Bharat Petroleum Corporation Ltd,Energy,0,High-Quality Compounders,0.59
+BRITANNIA,Britannia Industries Ltd,Consumer Staples,0,High-Quality Compounders,0.117
+CANBK,Canara Bank,Financials,0,High-Quality Compounders,0.735
+CHOLAFIN,Cholamandalam Investment & Finance Company Ltd,Financials,0,High-Quality Compounders,0.2871
+CIPLA,"Cipla Ltd
+",Healthcare,1,Defensive Dividend Payers,0.1393
+COALINDIA,Coal India Ltd,Materials,1,Defensive Dividend Payers,0.4345
+DABUR,Dabur India Ltd,Consumer Staples,0,High-Quality Compounders,0.0947
+DIVISLAB,Divis Laboratories Ltd,Healthcare,3,Emerging Growth,0.6295
+DLF,DLF Ltd,Real Estate,0,High-Quality Compounders,0.2243
+DMART,Avenue Supermarts Ltd,Consumer Discretionary,0,High-Quality Compounders,0.5269
+DRREDDY,Dr Reddys Laboratories Ltd,Healthcare,0,High-Quality Compounders,0.2082
+EICHERMOT,Eicher Motors Ltd,Consumer Discretionary,0,High-Quality Compounders,0.2796
+GAIL,GAIL (India) Ltd,Energy,0,High-Quality Compounders,0.3429
+GODREJCP,Godrej Consumer Products Ltd,Consumer Staples,0,High-Quality Compounders,0.0546
+GRASIM,Grasim Industries Ltd,Industrials,0,High-Quality Compounders,0.0707
+HAL,Hindustan Aeronautics Ltd,Industrials,3,Emerging Growth,0.7082
+HAVELLS,Havells India Ltd,Industrials,0,High-Quality Compounders,0.4471
+HCLTECH,HCL Technologies Ltd,Information Technology,0,High-Quality Compounders,0.0408
+HDFCBANK,HDFC Bank Ltd,Financials,1,Defensive Dividend Payers,0.5968
+HDFCLIFE,HDFC Life Insurance Company Ltd,Financials,1,Defensive Dividend Payers,0.9006
+HEROMOTOCO,"Hero MotoCorp Ltd
+",Consumer Discretionary,1,Defensive Dividend Payers,0.3141
+HINDALCO,Hindalco Industries Ltd,Materials,1,Defensive Dividend Payers,0.457
+HINDUNILVR,"Hindustan Unilever Ltd
+",Consumer Staples,1,Defensive Dividend Payers,0.0596
+ICICIBANK,ICICI Bank Ltd,Financials,1,Defensive Dividend Payers,0.3294
+ICICIGI,ICICI Lombard General Insurance Company Ltd,Financials,4,Distressed / Turnaround,0.0
+ICICIPRULI,ICICI Prudential Life Insurance Company Ltd,Financials,1,Defensive Dividend Payers,0.8409
+INDUSINDBK,IndusInd Bank Ltd,Financials,0,High-Quality Compounders,0.7657
+INFY,Infosys Ltd,Information Technology,0,High-Quality Compounders,0.1982
+IOC,"Indian Oil Corporation
+",Energy,0,High-Quality Compounders,0.6537
+IRCTC,Indian Railway Catering & Tourism Corporation Ltd,Consumer Discretionary,0,High-Quality Compounders,0.516
+IRFC,Indian Railway Finance Corporation Ltd,Financials,1,Defensive Dividend Payers,0.8304
+ITC,"ITC Ltd
+",Consumer Staples,3,Emerging Growth,0.3896
+JINDALSTEL,Jindal Steel & Power Ltd,Materials,0,High-Quality Compounders,0.0477
+JIOFIN,Jio Financial Services Ltd,Financials,1,Defensive Dividend Payers,0.0671
+JSWENERGY,JSW Energy Ltd,Energy,0,High-Quality Compounders,1.0006
+JSWSTEEL,JSW Steel Ltd,Materials,0,High-Quality Compounders,0.3141
+KOTAKBANK,"Kotak Mahindra Bank Ltd
+",Financials,1,Defensive Dividend Payers,0.0872
+LICI,Life Insurance Corporation of India,Financials,0,High-Quality Compounders,0.7095
+LODHA,Macrotech Developers Ltd,Real Estate,0,High-Quality Compounders,0.2678
+LT,Larsen & Toubro Ltd,Industrials,0,High-Quality Compounders,0.3252
+LTIM,LTIMindtree Ltd,Information Technology,0,High-Quality Compounders,0.1501
+M&M,"Mahindra & Mahindra Ltd
+",Consumer Discretionary,0,High-Quality Compounders,0.1121
+MARUTI,Maruti Suzuki India Ltd,Consumer Discretionary,0,High-Quality Compounders,0.3575
+MOTHERSON,Samvardhana Motherson International Ltd,Consumer Discretionary,0,High-Quality Compounders,0.4515
+NAUKRI,Info Edge (India) Ltd,Communication Services,0,High-Quality Compounders,0.2794
+NESTLEIND,Nestle India Ltd,Consumer Staples,0,High-Quality Compounders,0.1103
+NHPC,"NHPC Ltd
+",Energy,1,Defensive Dividend Payers,1.0129
+NTPC,NTPC Ltd,Energy,0,High-Quality Compounders,0.2728
+ONGC,Oil & Natural Gas Corpn Ltd,Energy,0,High-Quality Compounders,0.3184
+PFC,Power Finance Corporation Ltd,Financials,0,High-Quality Compounders,0.5896
+PIDILITIND,Pidilite Industries Ltd,Materials,0,High-Quality Compounders,0.1043
+PNB,Punjab National Bank,Financials,0,High-Quality Compounders,0.7504
+POWERGRID,Power Grid Corporation of India Ltd,Energy,1,Defensive Dividend Payers,0.3009
+RECLTD,REC Ltd,Financials,1,Defensive Dividend Payers,0.8042
+RELIANCE,"Reliance Industries Ltd
+",Energy,0,High-Quality Compounders,0.1515
+SBILIFE,SBI Life Insurance Company Ltd,Financials,0,High-Quality Compounders,0.7907
+SBIN,State Bank of India,Financials,0,High-Quality Compounders,1.3055
+SHREECEM,Shree Cement Ltd,Materials,0,High-Quality Compounders,0.0135
+SHRIRAMFIN,"Shriram Finance Ltd
+",Financials,0,High-Quality Compounders,0.2919
+SUNPHARMA,Sun Pharmaceuticals Industries Ltd,Healthcare,0,High-Quality Compounders,0.2737
+TATACONSUM,Tata Consumer Products Ltd,Consumer Staples,0,High-Quality Compounders,0.2313
+TATAMOTORS,Tata Motors Ltd,Consumer Discretionary,0,High-Quality Compounders,0.2914
+TATAPOWER,"Tata Power Company Ltd
+",Energy,0,High-Quality Compounders,0.156
+TATASTEEL,"Tata Steel Ltd
+",Materials,0,High-Quality Compounders,0.3805
+TCS,Tata Consultancy Services Ltd,Information Technology,0,High-Quality Compounders,0.2589
+TECHM,Tech Mahindra Ltd,Information Technology,0,High-Quality Compounders,0.3611
+TITAN,"Titan Company Ltd
+",Consumer Discretionary,0,High-Quality Compounders,0.4497
+TORNTPHARM,Torrent Pharmaceuticals Ltd,Healthcare,0,High-Quality Compounders,0.4246
+TRENT,Trent Ltd,Consumer Discretionary,0,High-Quality Compounders,0.2153
+TVSMOTOR,TVS Motor Company Ltd,Consumer Discretionary,0,High-Quality Compounders,0.2674
+ULTRACEMCO,,,0,High-Quality Compounders,0.2091
+UNIONBANK,,,0,High-Quality Compounders,0.2091
+UNITDSPR,,,0,High-Quality Compounders,0.2091
+VBL,,,0,High-Quality Compounders,0.2091
+VEDL,,,0,High-Quality Compounders,0.2091
+WIPRO,,,0,High-Quality Compounders,0.2091
+ZOMATO,,,0,High-Quality Compounders,0.2091
+ZYDUSLIFE,,,0,High-Quality Compounders,0.2091
+INDIGO,Interglobe Aviation Ltd,Consumer Discretionary,1,Defensive Dividend Payers,0.0529

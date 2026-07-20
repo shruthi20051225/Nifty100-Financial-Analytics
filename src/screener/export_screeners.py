@@ -20,36 +20,22 @@ screeners = {
 }
 
 # Export to Excel
-with pd.ExcelWriter(
-    "output/screener_output.xlsx",
-    engine="openpyxl"
-) as writer:
+with pd.ExcelWriter("output/screener_output.xlsx", engine="openpyxl") as writer:
 
     for sheet_name, df in screeners.items():
 
         if len(df) == 0:
-            df.to_excel(
-                writer,
-                sheet_name=sheet_name[:31],
-                index=False
-            )
+            df.to_excel(writer, sheet_name=sheet_name[:31], index=False)
             continue
 
         # Compute Composite Score
         df = compute_composite_score(df)
 
         # Sort highest score first
-        df = df.sort_values(
-            by="composite_quality_score",
-            ascending=False
-        )
+        df = df.sort_values(by="composite_quality_score", ascending=False)
 
         # Export
-        df.to_excel(
-            writer,
-            sheet_name=sheet_name[:31],
-            index=False
-        )
+        df.to_excel(writer, sheet_name=sheet_name[:31], index=False)
 
 print("=" * 50)
 print("Sprint 3 Day 17 Completed")

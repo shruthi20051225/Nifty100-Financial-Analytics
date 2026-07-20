@@ -1,10 +1,7 @@
 from typing import Optional
 
 
-def free_cash_flow(
-    operating_activity: float,
-    investing_activity: float
-) -> float:
+def free_cash_flow(operating_activity: float, investing_activity: float) -> float:
     """
     Free Cash Flow
     FCF = CFO + Investing Activity
@@ -12,10 +9,7 @@ def free_cash_flow(
     return operating_activity + investing_activity
 
 
-def cfo_quality_score(
-    cfo: float,
-    pat: float
-) -> Optional[str]:
+def cfo_quality_score(cfo: float, pat: float) -> Optional[str]:
     """
     CFO Quality
     """
@@ -35,10 +29,7 @@ def cfo_quality_score(
         return "Accrual Risk"
 
 
-def capex_intensity(
-    investing_activity: float,
-    sales: float
-):
+def capex_intensity(investing_activity: float, sales: float):
     """
     CapEx Intensity (%)
     """
@@ -60,10 +51,7 @@ def capex_intensity(
     return round(value, 2), label
 
 
-def fcf_conversion(
-    free_cash_flow_value: float,
-    operating_profit: float
-):
+def fcf_conversion(free_cash_flow_value: float, operating_profit: float):
     """
     FCF Conversion
     """
@@ -71,19 +59,10 @@ def fcf_conversion(
     if operating_profit == 0:
         return None
 
-    return round(
-        free_cash_flow_value /
-        operating_profit * 100,
-        2
-    )
+    return round(free_cash_flow_value / operating_profit * 100, 2)
 
 
-def capital_allocation_pattern(
-    cfo,
-    cfi,
-    cff,
-    cfo_pat_ratio=1
-):
+def capital_allocation_pattern(cfo, cfi, cff, cfo_pat_ratio=1):
     """
     8-pattern capital allocation classifier
     """
@@ -91,7 +70,7 @@ def capital_allocation_pattern(
     signs = (
         "+" if cfo >= 0 else "-",
         "+" if cfi >= 0 else "-",
-        "+" if cff >= 0 else "-"
+        "+" if cff >= 0 else "-",
     )
 
     if signs == ("+", "-", "-"):

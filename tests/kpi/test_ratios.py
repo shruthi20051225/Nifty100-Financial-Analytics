@@ -1,4 +1,4 @@
-import pytest
+
 
 from src.analytics.ratios import (
     net_profit_margin,
@@ -15,6 +15,7 @@ from src.analytics.ratios import (
 # =====================================================
 # DAY 8 – PROFITABILITY RATIOS
 # =====================================================
+
 
 def test_net_profit_margin_normal():
     assert net_profit_margin(100, 1000) == 10.0
@@ -41,12 +42,15 @@ def test_return_on_equity_negative_equity():
 
 
 def test_return_on_capital_employed_normal():
-    assert return_on_capital_employed(
-        ebit=250,
-        equity_capital=100,
-        reserves=400,
-        borrowings=500,
-    ) == 25.0
+    assert (
+        return_on_capital_employed(
+            ebit=250,
+            equity_capital=100,
+            reserves=400,
+            borrowings=500,
+        )
+        == 25.0
+    )
 
 
 def test_return_on_assets_normal():
@@ -61,6 +65,7 @@ def test_return_on_assets_zero_assets():
 # DAY 9 – LEVERAGE & EFFICIENCY
 # =====================================================
 
+
 def test_debt_to_equity_normal():
     assert debt_to_equity(500, 100, 400) == 1.0
 
@@ -74,19 +79,25 @@ def test_debt_to_equity_zero_equity():
 
 
 def test_interest_coverage_normal():
-    assert interest_coverage(
-        operating_profit=300,
-        other_income=100,
-        interest=100,
-    ) == 4.0
+    assert (
+        interest_coverage(
+            operating_profit=300,
+            other_income=100,
+            interest=100,
+        )
+        == 4.0
+    )
 
 
 def test_interest_coverage_zero_interest():
-    assert interest_coverage(
-        operating_profit=300,
-        other_income=50,
-        interest=0,
-    ) is None
+    assert (
+        interest_coverage(
+            operating_profit=300,
+            other_income=50,
+            interest=0,
+        )
+        is None
+    )
 
 
 def test_asset_turnover_normal():
@@ -103,3 +114,47 @@ def test_net_debt_positive():
 
 def test_net_debt_negative():
     assert net_debt(100, 250) == -150
+
+
+# =====================================================
+# SPRINT 6 ADDITIONAL TESTS
+# =====================================================
+
+
+def test_debt_to_equity_high_leverage():
+    assert debt_to_equity(3000, 100, 400) > 5
+
+
+def test_interest_coverage_negative():
+    assert (
+        interest_coverage(
+            operating_profit=-100,
+            other_income=0,
+            interest=20,
+        )
+        == -5.0
+    )
+
+
+def test_return_on_assets_large():
+    assert return_on_assets(1000000, 5000000) == 20.0
+
+
+def test_return_on_equity_zero_profit():
+    assert return_on_equity(0, 100, 400) == 0.0
+
+
+def test_net_profit_margin_negative():
+    assert net_profit_margin(-100, 1000) == -10.0
+
+
+def test_operating_profit_margin_negative():
+    assert operating_profit_margin(-150, 1000) == -15.0
+
+
+def test_asset_turnover_high():
+    assert asset_turnover(5000, 1000) == 5.0
+
+
+def test_net_debt_zero():
+    assert net_debt(500, 500) == 0

@@ -10,17 +10,13 @@ os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
 conn = sqlite3.connect(DB)
 
-analysis = pd.read_sql(
-    "SELECT * FROM analysis",
-    conn
-)
+analysis = pd.read_sql("SELECT * FROM analysis", conn)
 
 try:
     ratios = pd.read_sql(
-        "SELECT company_id, revenue_cagr_5yr, pat_cagr_5yr FROM financial_ratios",
-        conn
+        "SELECT company_id, revenue_cagr_5yr, pat_cagr_5yr FROM financial_ratios", conn
     )
-except:
+except Exception:
     ratios = pd.DataFrame()
 
 conn.close()
@@ -34,7 +30,7 @@ metric_columns = [
     "compounded_sales_growth",
     "compounded_profit_growth",
     "stock_price_cagr",
-    "roe"
+    "roe",
 ]
 
 for _, row in analysis.iterrows():
@@ -52,42 +48,27 @@ for _, row in analysis.iterrows():
             years = int(match.group(1))
             pct = float(match.group(2))
 
-            parsed_rows.append({
-
-                "company_id": company,
-
-                "metric_type": metric,
-
-                "period_years": years,
-
-                "value_pct": pct
-
-            })
+            parsed_rows.append(
+                {
+                    "company_id": company,
+                    "metric_type": metric,
+                    "period_years": years,
+                    "value_pct": pct,
+                }
+            )
 
         else:
 
-            failed_rows.append({
-
-                "company_id": company,
-
-                "metric_type": metric,
-
-                "raw_text": value
-
-            })
+            failed_rows.append(
+                {"company_id": company, "metric_type": metric, "raw_text": value}
+            )
 
 parsed = pd.DataFrame(parsed_rows)
 failures = pd.DataFrame(failed_rows)
 
-parsed.to_csv(
-    "output/analysis_parsed.csv",
-    index=False
-)
+parsed.to_csv("output/analysis_parsed.csv", index=False)
 
-failures.to_csv(
-    "output/parse_failures.csv",
-    index=False
-)
+failures.to_csv("output/parse_failures.csv", index=False)
 
 # ---------------------------
 # Optional validation
@@ -105,9 +86,7 @@ if not ratios.empty:
 
         value = row["value_pct"]
 
-        ratio_row = ratios[
-            ratios["company_id"] == cid
-        ]
+        ratio_row = ratios[ratios["company_id"] == cid]
 
         if ratio_row.empty:
             continue
@@ -129,40 +108,27 @@ if not ratios.empty:
 
             if diff > 5:
 
-                review.append({
+                review.append(
+                    {
+                        "company_id": cid,
+                        "metric": metric,
+                        "parsed_value": value,
+                        "computed_value": calc,
+                        "difference": round(diff, 2),
+                    }
+                )
 
-                    "company_id": cid,
+    pd.DataFrame(review).to_csv("output/cagr_manual_review.csv", index=False)
 
-                    "metric": metric,
-
-                    "parsed_value": value,
-
-                    "computed_value": calc,
-
-                    "difference": round(diff,2)
-
-                })
-
-    pd.DataFrame(review).to_csv(
-
-        "output/cagr_manual_review.csv",
-
-        index=False
-
-    )
-
-print("="*50)
+print("=" * 50)
 print("Analysis Parser Completed")
-print("="*50)
+print("=" * 50)
 print("Parsed Rows :", len(parsed))
 print("Failed Rows :", len(failures))
 
 review_df = pd.DataFrame(review)
 
-review_df.to_csv(
-    "output/cagr_manual_review.csv",
-    index=False
-)
+review_df.to_csv("output/cagr_manual_review.csv", index=False)
 
 print("Generated : output/cagr_manual_review.csv")
 

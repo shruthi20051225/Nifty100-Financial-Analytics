@@ -11,31 +11,18 @@ os.makedirs(OUTPUT, exist_ok=True)
 
 conn = sqlite3.connect(DB)
 
-cashflow = pd.read_sql(
-    "SELECT * FROM cashflow",
-    conn
-)
+cashflow = pd.read_sql("SELECT * FROM cashflow", conn)
 
-ratios = pd.read_sql(
-    "SELECT * FROM financial_ratios",
-    conn
-)
+ratios = pd.read_sql("SELECT * FROM financial_ratios", conn)
 
-companies = pd.read_sql(
-    "SELECT id, company_name FROM companies",
-    conn
-)
+companies = pd.read_sql("SELECT id, company_name FROM companies", conn)
 
 conn.close()
 
 
 def latest(df):
 
-    return (
-        df.sort_values("year")
-        .groupby("company_id")
-        .tail(1)
-    )
+    return df.sort_values("year").groupby("company_id").tail(1)
 
 
 latest_cf = latest(cashflow)
@@ -47,21 +34,14 @@ for _, row in latest_cf.iterrows():
 
     company_id = row["company_id"]
 
-    company = companies[
-        companies["id"] == company_id
-    ]
+    company = companies[companies["id"] == company_id]
 
     if company.empty:
         continue
 
     company_name = company.iloc[0]["company_name"]
 
-    ratio_history = (
-        ratios[
-            ratios["company_id"] == company_id
-        ]
-        .sort_values("year")
-    )
+    ratio_history = ratios[ratios["company_id"] == company_id].sort_values("year")
 
     if ratio_history.empty:
         continue
@@ -75,25 +55,17 @@ for _, row in latest_cf.iterrows():
 
     sales = latest_ratio.get("sales", np.nan)
 
-    free_cash = latest_ratio.get(
-        "free_cash_flow_cr",
-        np.nan
-    )
+    free_cash = latest_ratio.get("free_cash_flow_cr", np.nan)
 
-    cash_from_operations = latest_ratio.get(
-        "cash_from_operations_cr",
-        np.nan
-    )
+    cash_from_operations = latest_ratio.get("cash_from_operations_cr", np.nan)
 
     merged = pd.merge(
-        cashflow[
-            cashflow["company_id"] == company_id
-        ],
+        cashflow[cashflow["company_id"] == company_id],
         ratio_history,
         on=["company_id", "year"],
-        how="inner"
+        how="inner",
     )
-        # ------------------------------------
+    # ------------------------------------
     # CFO QUALITY
     # ------------------------------------
 
@@ -101,24 +73,17 @@ for _, row in latest_cf.iterrows():
 
     for _, r in merged.iterrows():
 
-        profit = r.get(
-            "net_profit_margin_pct",
-            np.nan
-        )
+        profit = r.get("net_profit_margin_pct", np.nan)
 
         cfo = r["operating_activity"]
 
         if pd.notna(profit) and profit != 0:
 
-            quality_scores.append(
-                cfo / profit
-            )
+            quality_scores.append(cfo / profit)
 
     if len(quality_scores):
 
-        cfo_quality = np.mean(
-            quality_scores
-        )
+        cfo_quality = np.mean(quality_scores)
 
     else:
 
@@ -146,9 +111,7 @@ for _, row in latest_cf.iterrows():
 
     if pd.notna(sales) and sales != 0:
 
-        capex_intensity = (
-            abs(investing) / sales
-        ) * 100
+        capex_intensity = (abs(investing) / sales) * 100
 
     else:
 
@@ -180,10 +143,7 @@ for _, row in latest_cf.iterrows():
         and cash_from_operations != 0
     ):
 
-        fcf_conversion = (
-            free_cash
-            / cash_from_operations
-        ) * 100
+        fcf_conversion = (free_cash / cash_from_operations) * 100
 
     else:
 
@@ -194,20 +154,14 @@ for _, row in latest_cf.iterrows():
     # ------------------------------------
 
     distress = (
-        pd.notna(operating)
-        and pd.notna(financing)
-        and operating < 0
-        and financing > 0
+        pd.notna(operating) and pd.notna(financing) and operating < 0 and financing > 0
     )
 
     # ------------------------------------
     # DELEVERAGING
     # ------------------------------------
 
-    deleveraging = (
-        pd.notna(financing)
-        and financing < 0
-    )
+    deleveraging = pd.notna(financing) and financing < 0
 
     # ------------------------------------
     # CAPITAL ALLOCATION
@@ -221,18 +175,11 @@ for _, row in latest_cf.iterrows():
 
         capital_label = "Deleveraging"
 
-    elif (
-        operating > 0
-        and investing < 0
-        and financing < 0
-    ):
+    elif operating > 0 and investing < 0 and financing < 0:
 
         capital_label = "Shareholder Return"
 
-    elif (
-        operating > 0
-        and investing < 0
-    ):
+    elif operating > 0 and investing < 0:
 
         capital_label = "Growth Investment"
 
@@ -243,15 +190,11 @@ for _, row in latest_cf.iterrows():
     else:
 
         capital_label = "Balanced"
-            # ------------------------------------
+        # ------------------------------------
     # FCF CAGR (Simple Estimate)
     # ------------------------------------
 
-    fcf_history = (
-        ratio_history["free_cash_flow_cr"]
-        .dropna()
-        .tolist()
-    )
+    fcf_history = ratio_history["free_cash_flow_cr"].dropna().tolist()
 
     if len(fcf_history) >= 5:
 
@@ -260,9 +203,7 @@ for _, row in latest_cf.iterrows():
 
         if first > 0 and last > 0:
 
-            fcf_cagr = (
-                ((last / first) ** (1 / 4)) - 1
-            ) * 100
+            fcf_cagr = (((last / first) ** (1 / 4)) - 1) * 100
 
         else:
 
@@ -276,74 +217,51 @@ for _, row in latest_cf.iterrows():
     # SAVE RESULT
     # ------------------------------------
 
-    results.append({
-
-        "company_id": company_id,
-
-        "company_name": company_name,
-
-        "latest_year": row["year"],
-
-        "operating_activity": operating,
-
-        "investing_activity": investing,
-
-        "financing_activity": financing,
-
-        "net_cash_flow": net_cash,
-
-        "cfo_quality_score": round(cfo_quality, 2)
-        if pd.notna(cfo_quality) else np.nan,
-
-        "cfo_quality_label": cfo_label,
-
-        "capex_intensity_pct": round(capex_intensity, 2)
-        if pd.notna(capex_intensity) else np.nan,
-
-        "capex_label": capex_label,
-
-        "fcf_cagr_5yr": round(fcf_cagr, 2)
-        if pd.notna(fcf_cagr) else np.nan,
-
-        "fcf_conversion_pct": round(fcf_conversion, 2)
-        if pd.notna(fcf_conversion) else np.nan,
-
-        "distress_flag": distress,
-
-        "deleveraging_flag": deleveraging,
-
-        "capital_allocation_label": capital_label
-
-    })
+    results.append(
+        {
+            "company_id": company_id,
+            "company_name": company_name,
+            "latest_year": row["year"],
+            "operating_activity": operating,
+            "investing_activity": investing,
+            "financing_activity": financing,
+            "net_cash_flow": net_cash,
+            "cfo_quality_score": (
+                round(cfo_quality, 2) if pd.notna(cfo_quality) else np.nan
+            ),
+            "cfo_quality_label": cfo_label,
+            "capex_intensity_pct": (
+                round(capex_intensity, 2) if pd.notna(capex_intensity) else np.nan
+            ),
+            "capex_label": capex_label,
+            "fcf_cagr_5yr": round(fcf_cagr, 2) if pd.notna(fcf_cagr) else np.nan,
+            "fcf_conversion_pct": (
+                round(fcf_conversion, 2) if pd.notna(fcf_conversion) else np.nan
+            ),
+            "distress_flag": distress,
+            "deleveraging_flag": deleveraging,
+            "capital_allocation_label": capital_label,
+        }
+    )
 
     if distress:
 
-        alerts.append({
-
-            "company_id": company_id,
-
-            "company_name": company_name,
-
-            "operating_activity": operating,
-
-            "financing_activity": financing,
-
-            "net_cash_flow": net_cash
-
-        })
+        alerts.append(
+            {
+                "company_id": company_id,
+                "company_name": company_name,
+                "operating_activity": operating,
+                "financing_activity": financing,
+                "net_cash_flow": net_cash,
+            }
+        )
         cashflow_df = pd.DataFrame(results)
 
 alerts_df = pd.DataFrame(alerts)
 
-cashflow_df.to_excel(
-    "output/cashflow_intelligence.xlsx",
-    index=False
-)
+cashflow_df.to_excel("output/cashflow_intelligence.xlsx", index=False)
 
-alerts_df.to_csv(
-    "output/distress_alerts.csv",
-    index=False
-)
+alerts_df.to_csv("output/distress_alerts.csv", index=False)
 
 print("=" * 60)
 print("Cash Flow Intelligence Completed")

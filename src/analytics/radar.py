@@ -35,11 +35,7 @@ if peer_col is None:
 
 peer = peer.rename(columns={peer_col: "peer_group"})
 
-df = ratios.merge(
-    peer,
-    on="company_id",
-    how="left"
-)
+df = ratios.merge(peer, on="company_id", how="left")
 
 metrics = [
     "return_on_equity_pct",
@@ -101,8 +97,6 @@ for company in df["company_id"].unique():
         title=f"{company} Radar Chart",
     )
 
-    fig.write_image(
-        f"reports/radar_charts/{company}_radar.png"
-    )
+    fig.write_image(f"reports/radar_charts/{company}_radar.png")
 
 print("Radar charts generated.")

@@ -1,4 +1,4 @@
-import pytest
+
 
 from src.analytics.cagr import (
     calculate_cagr,
@@ -13,10 +13,10 @@ from src.analytics.cagr import (
     INSUFFICIENT,
 )
 
-
 # =====================================================
 # Generic CAGR
 # =====================================================
+
 
 def test_normal_cagr():
 
@@ -70,6 +70,7 @@ def test_insufficient():
 # Revenue CAGR
 # =====================================================
 
+
 def test_revenue_cagr():
 
     value, flag = revenue_cagr(1000, 1800, 5)
@@ -81,6 +82,7 @@ def test_revenue_cagr():
 # =====================================================
 # PAT CAGR
 # =====================================================
+
 
 def test_pat_cagr():
 
@@ -94,6 +96,7 @@ def test_pat_cagr():
 # EPS CAGR
 # =====================================================
 
+
 def test_eps_cagr():
 
     value, flag = eps_cagr(20, 40, 5)
@@ -105,6 +108,7 @@ def test_eps_cagr():
 # =====================================================
 # Extra Positive Test
 # =====================================================
+
 
 def test_positive_case():
 

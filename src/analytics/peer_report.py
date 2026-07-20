@@ -23,21 +23,16 @@ conn.close()
 report = peer.pivot_table(
     index=["company_id", "peer_group", "year"],
     columns="metric",
-    values="percentile_rank"
+    values="percentile_rank",
 ).reset_index()
 
-writer = pd.ExcelWriter(
-    "output/peer_comparison.xlsx",
-    engine="openpyxl"
-)
+writer = pd.ExcelWriter("output/peer_comparison.xlsx", engine="openpyxl")
 
 groups = sorted(report["peer_group"].dropna().unique())
 
 for group in groups:
 
-    df = report[
-        report["peer_group"] == group
-    ].copy()
+    df = report[report["peer_group"] == group].copy()
 
     # Median row
     median = df.select_dtypes(include="number").median()
@@ -53,21 +48,11 @@ for group in groups:
 
     median_row["company_id"] = "PEER MEDIAN"
 
-    df = pd.concat(
-        [
-            df,
-            pd.DataFrame([median_row])
-        ],
-        ignore_index=True
-    )
+    df = pd.concat([df, pd.DataFrame([median_row])], ignore_index=True)
 
     sheet = str(group)[:31]
 
-    df.to_excel(
-        writer,
-        sheet_name=sheet,
-        index=False
-    )
+    df.to_excel(writer, sheet_name=sheet, index=False)
 
 writer.close()
 

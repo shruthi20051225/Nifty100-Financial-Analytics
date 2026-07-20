@@ -21,11 +21,7 @@ ratios = pd.read_sql(
 peer = pd.read_excel("data/raw/peer_groups.xlsx")
 
 # Merge
-df = ratios.merge(
-    peer,
-    on="company_id",
-    how="left"
-)
+df = ratios.merge(peer, on="company_id", how="left")
 
 # Rename peer group column if required
 if "peer_group" not in df.columns:
@@ -56,12 +52,7 @@ for group in df["peer_group"].dropna().unique():
         ascending = metric == "debt_to_equity"
 
         group_df["percentile"] = (
-            group_df[metric]
-            .rank(
-                pct=True,
-                ascending=ascending
-            )
-            * 100
+            group_df[metric].rank(pct=True, ascending=ascending) * 100
         )
 
         for _, row in group_df.iterrows():
@@ -72,7 +63,7 @@ for group in df["peer_group"].dropna().unique():
                     "peer_group": group,
                     "metric": metric,
                     "value": row[metric],
-                    "percentile_rank": round(row["percentile"],2),
+                    "percentile_rank": round(row["percentile"], 2),
                     "year": row["year"],
                 }
             )

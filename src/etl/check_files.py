@@ -8,4 +8,3 @@ print(f"Found {len(files)} Excel files\n")
 
 for f in files:
     print(f.name)
-    

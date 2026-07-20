@@ -29,47 +29,25 @@ for file in Path("data/raw").glob("*.xlsx"):
     try:
         header_row = HEADER_MAP.get(table_name, 0)
 
-        df = pd.read_excel(
-            file,
-            header=header_row
-        )
+        df = pd.read_excel(file, header=header_row)
 
         print(f"\nLoading {table_name}")
         print(f"Rows: {len(df)}")
 
-        df.columns = [
-            str(col).strip().lower().replace(" ", "_")
-            for col in df.columns
-        ]
+        df.columns = [str(col).strip().lower().replace(" ", "_") for col in df.columns]
 
-        df.to_sql(
-            table_name,
-            conn,
-            if_exists="replace",
-            index=False
-        )
+        df.to_sql(table_name, conn, if_exists="replace", index=False)
 
-        audit.append({
-            "table": table_name,
-            "rows_loaded": len(df),
-            "status": "SUCCESS"
-        })
+        audit.append({"table": table_name, "rows_loaded": len(df), "status": "SUCCESS"})
 
     except Exception as e:
 
         print(f"ERROR: {table_name}")
         print(e)
 
-        audit.append({
-            "table": table_name,
-            "rows_loaded": 0,
-            "status": str(e)
-        })
+        audit.append({"table": table_name, "rows_loaded": 0, "status": str(e)})
 
-pd.DataFrame(audit).to_csv(
-    "output/load_audit.csv",
-    index=False
-)
+pd.DataFrame(audit).to_csv("output/load_audit.csv", index=False)
 
 conn.close()
 
